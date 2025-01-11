@@ -24,7 +24,7 @@
         .map-overlay {
             font: bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
             position: absolute;
-            width: 240px;
+            width: 150px;
             bottom: 30px;
             left: 0;
             padding: 10px;
@@ -69,9 +69,9 @@
     <div id="map"></div>
     <div class="map-overlay top">
         <div class="map-overlay-inner">
-            <label>空中写真 撮影時期: <span id="slider-year-value">全国最新写真</span></label>
+            <label>空中写真 撮影時期: <br><span id="slider-year-value">全国最新写真</span></label>
             <input id="slider-year" type="range" min="0" max="8" step="1" value="8">
-            <label>空中写真 不透明度: <span id="slider-opacity-value">100%</span></label>
+            <label>空中写真 不透明度: <br><span id="slider-opacity-value">100%</span></label>
             <input id="slider-opacity" type="range" min="0" max="100" step="0" value="100">
         </div>
     </div>
@@ -86,9 +86,9 @@
 
         // let PMTILES_URL = "https://protomaps.github.io/PMTiles/protomaps(vector)ODbL_firenze.pmtiles";
         // let PMTILES_URL = "https://x.optgeo.org/ipfs/QmTZHWMAnRC5zNiNvdVuTDacThKkj4jKbwsZtKQkAC4R69";
-        let PMTILES_URL = "https://habs.rad.naro.go.jp/spatial_data/amx/a.pmtiles";
+        // let PMTILES_URL = "https://habs.rad.naro.go.jp/spatial_data/amx/a.pmtiles";
         // let PMTILES_URL = "https://smb.optgeo.org/ipfs/QmTZHWMAnRC5zNiNvdVuTDacThKkj4jKbwsZtKQkAC4R69";
-
+        let PMTILES_URL = "https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/moj-xml/a.pmtiles"
         const p = new pmtiles.PMTiles(PMTILES_URL)
 
         // this is so we share one instance across the JS code and the map renderer
